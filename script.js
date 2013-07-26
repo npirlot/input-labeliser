@@ -4,8 +4,8 @@
 			x = arguments[0];
 			
 		var defaults = {
-			module: "labeliser",
-			author: "Creations NP",
+			__module: "labeliser",
+			__author: "Creations NP",
 			version: "1.0",
 			debug: true,
 			delimiter: ",",
