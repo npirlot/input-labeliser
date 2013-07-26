@@ -16,6 +16,8 @@
 		
 		if(typeof(arguments[0]) == "object"){
 			x = $.extend(true, {}, defaults, arguments[0]);
+		}else{
+			x = defaults;
 		}
 		
 		x._vals = $this.val().split(x.delimiter);
