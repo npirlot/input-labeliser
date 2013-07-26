@@ -1,6 +1,6 @@
 (function($){
 	$.fn.labelise = function(){
-		var $this = this;
+		var $this = this, x = {};
 			
 		var defaults = {
 			__module: "labeliser",
