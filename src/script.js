@@ -5,10 +5,12 @@
 		var defaults = {
 			__module: "labeliser",
 			__author: "Creations NP",
-			version: "1.0",
+			__version: "1.0",
 			debug: true,
 			delimiter: ",",
 			list: [],	//: { value: "", label: "" }
+			value: null,
+			input_selector: null,
 			width: "100%",
 			wrapper_class: "",
 			labels_class: ""
@@ -20,7 +22,13 @@
 			x = defaults;
 		}
 		
+		//: set some x's:
 		x._vals = $this.val().split(x.delimiter);
+		if(x.input_selector == null){
+			x.input_field = $this;
+		}else{
+			x.input_field = $(x.input_selector);
+		}
 		
 		//: set labels:
 		x.labels = []; //: { value: "", label: "", class: "" }
